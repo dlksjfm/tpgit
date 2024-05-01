@@ -9,4 +9,4 @@ COPY app/Greeter.jar /app/Greeter.jar
 WORKDIR /app
 
 # Commande à exécuter lorsque le conteneur démarre
-CMD ["java", "-jar", "HelloWorld.jar", "Greeter.jar"]
+CMD ["java", "-jar", "HelloWorld.jar"]
