@@ -56,5 +56,5 @@ jobs:
         - name: Build Docker image
           run: |
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            docker build -t java .
+            docker build -t java -f D:\master pro 1er\semster 2\devops\tpgit\Dockerfile .
             docker push mohamedgmxde/java
