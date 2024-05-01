@@ -59,4 +59,4 @@ jobs:
         run: docker build -t java .
 
       - name: Push Docker image to Docker Hub
-        run: docker push mohamedgmxde/java
+        run: docker push mohamedgmxde/java:tagname
