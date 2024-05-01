@@ -56,7 +56,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: Build Docker image
-        run: docker build -t java .
+        run: docker build -t mohamedgmxde/java:tagname .
 
       - name: Push Docker image to Docker Hub
-        run: docker push mohamedgmxde/java
+        run: docker push mohamedgmxde/java:tagname

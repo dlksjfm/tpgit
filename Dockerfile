@@ -2,7 +2,8 @@
 FROM openjdk:11
 
 # Copiez le fichier JAR de votre application dans le conteneur
-COPY target/HelloWorld.jar /app/HelloWorld.jar
+COPY app/HelloWorld.jar /app/HelloWorld.jar
+COPY app/Greeting.jar /app/Greeting.jar
 
 # Spécifiez le répertoire de travail
 WORKDIR /app
