@@ -42,10 +42,10 @@ jobs:
         path: staging
         
   Deployment:
-    name: Deploy to Docker
-    runs-on: windows-latest
-    needs: [test]
-    steps:
+   name: Deploy to Docker
+   runs-on: ubuntu-latest
+   needs: [test]
+   steps:
       - name: Checkout repository
         uses: actions/checkout@v2
       
@@ -56,7 +56,8 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: Build Docker image
-        run: docker build -t mohamedgmxde/java:tagname .
-
+        run: docker build -t java -f "D:/master pro 1er/semster 2/devops/tpgit/Dockerfile" .
+      
       - name: Push Docker image to Docker Hub
-        run: docker push mohamedgmxde/java:tagname
+        run: docker push mohamedgmxde/java
+
